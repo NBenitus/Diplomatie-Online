@@ -4,129 +4,131 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
- <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                 <a class="navbar-brand" href="#">Diplomatie-Online</a>
-            </div>
-            <ul class="nav navbar-right top-nav">
-                <li>
-                    <form class="navbar-form navbar-right">
-                         <input type="text" class="form-control" placeholder="Recherche...">
-                   </form>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Diplomatie-Online</a>
+        </div>
+        <ul class="nav navbar-right top-nav">
+            <li>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Recherche...">
+                </form>
+            </li>
+            <li>
+                <a href="#" class="image" title="View profile">
+                    <img src="images/Self_Picture.png" alt='avatar' width="20" height="20">
+                    <span class="username">Raptor</span>
+                </a>
+            </li>
+            <li class="notifications ">
+                <a href="#" title="Nouveaux messages (0 new items)"> <i class="fa fa-dashboard" aria-hidden="true"></i>
+                    <span class="text">Messages</span>
+                    <span class="badge">3</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Edit settings"> <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <span class="text">Options</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Log out"> <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <span class="text">Déconnection</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" title="Help"> <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    <span class="text">Aide</span>
+                </a>
+            </li>
+        </ul>           
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li class="dropdown">                       
+                    <a href="javascript:;" data-toggle="collapse" data-target="#social"><i class="fa fa-fw fa-group"></i> Social <i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="social" class="collapse">
+                        <li>
+                            <a href="#"><i class="fa fa-commenting fa-fw"></i> Forum</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-globe fa-fw"></i> Dépêches</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#" class="image" title="View profile">
-                        <img src="images/Self_Picture.png" alt='avatar' width="20" height="20">
-                        <span class="username">Raptor</span>
-                    </a>
-                 </li>
-                 <li class="notifications ">
-                     <a href="#" title="Nouveaux messages (0 new items)"> <i class="fa fa-dashboard" aria-hidden="true"></i>
-                         <span class="text">Messages</span>
-                         <span class="badge">3</span>
-                     </a>
-                 </li>
-                 <li>
-                     <a href="#" title="Edit settings"> <i class="fa fa-cogs" aria-hidden="true"></i>
-                         <span class="text">Options</span>
-                     </a>
-                 </li>
-                 <li>
-                     <a href="#" title="Log out"> <i class="fa fa-sign-out" aria-hidden="true"></i>
-                         <span class="text">Déconnection</span>
-                     </a>
-                 </li>
-                 <li>
-                     <a href="#" title="Help"> <i class="fa fa-question-circle" aria-hidden="true"></i>
-                         <span class="text">Aide</span>
-                     </a>
-                 </li>
-            </ul>           
-
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                   <li class="dropdown">                       
-                       <a href="javascript:;" data-toggle="collapse" data-target="#social"><i class="fa fa-fw fa-group"></i> Social <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="social" class="collapse">
-                            <li>
-                                <a href="#"><i class="fa fa-commenting fa-fw"></i> Forum</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-globe fa-fw"></i> Dépêches</a>
-                            </li>
-                       </ul>
-                   </li>
-                   <li>
-                       <a href="javascript:;" data-toggle="collapse" data-target="#vos-parties"><i class="fa fa-fw fa-map-signs"></i> Vos parties<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="vos-parties" class="collapse">
-                            <li>
-                                    <a href="#"><i class="fa fa-envelope fa-fw"></i> Parties avec diplomatie</a>
-                                </li>
-                            <li>
-                                <a href="#"><i class="fa fa-bolt fa-fw"></i> Parties blitz</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-gears fa-fw"></i> Parties mastérisées</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-eye-slash fa-fw"></i> Parties masquées</a>
-                            </li>
-                       </ul>
-                   </li>
-                   <li>
-                       <a href="javascript:;" data-toggle="collapse" data-target="#gestion-parties"><i class="fa fa-fw fa-cog"></i> Gestion de parties<i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="gestion-parties" class="collapse">
-                            <li>
-                                <a href="#"><i class="fa fa-plus fa-fw"></i> Créer une partie</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-arrow-right fa-fw"></i> Rejoindre une partie</a>
-                            </li>
-                           <li>
-                                <a href="#"><i class="fa fa-exchange fa-fw"></i> Remplacements</a>
-                            </li>
-                       </ul>
-                   </li>
-                   <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Outils <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                          <li>
-                                    <a href="#"><i class="fa fa-feed fa-fw"></i> Évènements</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-calculator fa-fw"></i> Simulateur</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-trophy fa-fw"></i> Classement</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Statistiques</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-star fa-fw"></i> Variantes</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-archive"></i> Archives <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo2" class="collapse">
-                            <li>
-                                    <a href="#"><i class="fa fa-check fa-fw"></i> Parties terminées</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-check fa-newspaper-o"></i> Anciennes Dépêches</a>
-                            </li>
-                            <li>
-                                    <a href="#"><i class="fa fa-check fa-book"></i> Anciens Sondages</a>
-                            </li>
-                       </ul>
-                   </li>
-               </ul>
-           </div>
-       </nav>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#vos-parties"><i class="fa fa-fw fa-map-signs"></i> Vos parties<i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="vos-parties" class="collapse">
+                        <li>
+                            <a href="#"><i class="fa fa-envelope fa-fw"></i> Parties avec diplomatie</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bolt fa-fw"></i> Parties blitz</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-gears fa-fw"></i> Parties mastérisées</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-eye-slash fa-fw"></i> Parties masquées</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#gestion-parties"><i class="fa fa-fw fa-cog"></i> Gestion de parties<i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="gestion-parties" class="collapse">
+                        <li>
+                            <a href="#"><i class="fa fa-plus fa-fw"></i> Créer une partie</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-arrow-right fa-fw"></i> Rejoindre une partie</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-exchange fa-fw"></i> Remplacements</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Outils <i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="demo" class="collapse">
+                        <li>
+                            <a href="#"><i class="fa fa-feed fa-fw"></i> Évènements</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-calculator fa-fw"></i> Simulateur</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-trophy fa-fw"></i> Classement</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart fa-fw"></i> Statistiques</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-star fa-fw"></i> Variantes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-archive"></i> Archives <i class="fa fa-fw fa-caret-down"></i></a>
+                    <ul id="demo2" class="collapse">
+                        <li>
+                            <a href="#"><i class="fa fa-check fa-fw"></i> Parties terminées</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-check fa-newspaper-o"></i> Anciennes Dépêches</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-check fa-book"></i> Anciens Sondages</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

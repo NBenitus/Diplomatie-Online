@@ -1,0 +1,27 @@
+
+.main-page
+{
+    background: #F5DEB3; 
+    color:black;
+    padding-top: 20px;
+}
+
+.table-bordered,
+.table-bordered thead tr th,
+.table-bordered tbody tr td{
+    border-color:black;
+    border-style:solid;
+}
+
+.nav-second-level
+{
+    white-space: nowrap;
+}
+
+.theme-showcase{   
+    padding-left: 0px;    
+}
+
+.row > img {
+    padding-bottom: 20px;
+}
