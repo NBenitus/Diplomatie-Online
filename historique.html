@@ -2,161 +2,199 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="css/dashboard.css" rel="stylesheet">
+        <link href="css/sb-admin.css" rel="stylesheet">
+        <link href="css/metisMenu.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="icon" href="images/favicon.ico">
 
-    <title>Half Slider - Start Bootstrap Template</title>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("header.html");
+            });
+        </script> 
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="main-page">
 
-    <!-- Custom CSS -->
-    <link href="css/half-slider.css" rel="stylesheet">
+        <div id="wrapper">
+            <div id="header"></div>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <div class='header-text'>
+                <h1>Raptor vs Tullius </h1>
+                <h3>Historique de la partie</h2>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
+
+            <div class="container" role="main">
+
+                <!-- Carousel -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!--       Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div id="history-item1" class="carousel-image">&nbsp;</div>
+                        </div>
+                        <div class="item">
+                            <div id="history-item2" class="carousel-image">&nbsp;</div>
+                        </div>
+                        <div class="item">
+                            <div id="history-item3" class="carousel-image">&nbsp;</div>
+                        </div>
+                        <div class="item">
+                            <div id="history-item4" class="carousel-image">&nbsp;</div>
+                        </div>
+                        <div class="item">
+                            <div id="history-item5" class="carousel-image">&nbsp;</div>
+                        </div>
+                        <div class="item">
+                            <div id="history-item6" class="carousel-image">&nbsp;</div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <div id="carouselButtons">
+                        <button id="playButton" type="button" class="btn btn-default btn-xs">
+                            <span class="fa fa-play-circle"></span>
+                        </button>
+                        <button id="pauseButton" type="button" class="btn btn-default btn-xs">
+                            <span class="fa fa-pause-circle"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class='orders'>
+                    <div class='orders-inner'>
+                        <div class='country'>
+                            <h4>Axe</h4>
+                            <ol>
+                                <li>Mun - Bou</li>
+                                <li>Kie - Pay</li>
+                                <li>Ank - Noi</li>
+                                <li>Smy - Cau</li>
+                                <li>Ber - Sil</li>
+                                <li>Bud - Rou</li>
+                                <li>Vie - Gal</li>
+                                <li>Con - Bul</li>
+                                <li>Tri - Mon</li>
+                            </ol>
+                        </div>
+                        <div class='country'>
+                            <h4>Alliés</h4>
+                            <ol>
+                                <li>Par - Bou </li>
+                                <li>sStp - Bot</li>
+                                <li>Edi - Nrd</li>
+                                <li>Liv - Yor</li>
+                                <li>Lon - Man</li>
+                                <li>Tou S Par - Bou</li>
+                                <li>Var - Gal</li>
+                                <li>Mos - Ukr</li>
+                                <li>Ode - Cau</li>
+                                <li>Bre - Atl</li>
+                            </ol>
+                        </div>
+                        <!--                    <div class='country'>
+                                                <h4>Alliés</h4>
+                                                <ol>
+                                                    <li>Par - Bou </li>
+                                                    <li>sStp - Bot</li>
+                                                    <li>Edi - Nrd</li>
+                                                    <li>Liv - Yor</li>
+                                                    <li>Lon - Man</li>
+                                                    <li>Tou S Par - Bou</li>
+                                                    <li>Var - Gal</li>
+                                                    <li>Mos - Ukr</li>
+                                                    <li>Ode - Cau</li>
+                                                    <li>Bre - Atl</li>
+                                                    <li>Par - Bou </li>
+                                                    <li>sStp - Bot</li>
+                                                    <li>Edi - Nrd</li>
+                                                    <li>Liv - Yor</li>
+                                                    <li>Lon - Man</li>
+                                                    <li>Tou S Par - Bou</li>
+                                                    <li>Var - Gal</li>
+                                                    <li>Mos - Ukr</li>
+                                                    <li>Ode - Cau</li>
+                                                    <li>Bre - Atl</li>
+                                                </ol>
+                                            </div>
+                                            <div class='country'>
+                                                <h4>Alliés</h4>
+                                                <ul>
+                                                    <li>Par - Bou </li>
+                                                    <li>sStp - Bot</li>
+                                                    <li>Edi - Nrd</li>
+                                                    <li>Liv - Yor</li>
+                                                    <li>Lon - Man</li>
+                                                </ul>
+                                            </div>
+                                            <div class='country'>
+                                                <h4>Alliés</h4>
+                                                <ul>
+                                                    <li>Par - Bou </li>
+                                                </ul>
+                                            </div>
+                                            <div class='country'>
+                                                <h4>Alliés</h4>
+                                                <ul>
+                                                    <li>Par - Bou </li>
+                                                    <li>sStp - Bot</li>
+                                                    <li>Edi - Nrd</li>
+                                                    <li>Liv - Yor</li>
+                                                    <li>Lon - Man</li>
+                                                </ul>
+                                            </div>
+                                            <div class='country'>
+                                                <h4>Alliés</h4>
+                                                <ul>
+                                                    <li>Par - Bou </li>
+                                                    <li>sStp - Bot</li>
+                                                    <li>Edi - Nrd</li>
+                                                </ul>
+                                            </div>-->
+                    </div>
+                </div>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
-    </nav>
 
-    <!-- Half Page Image Background Carousel Header -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-        </ol>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Four');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 4</h2>
-                </div>
-            </div>
-            <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Five');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 5</h2>
-                </div>
-            </div>
-        </div>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/carouselPlayPause.js"></script>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+        <!-- Script to Activate the Carousel -->
+        <script>
+                            $('.carousel').carousel({
+                                interval: 6000 //changes the speed
+                            })
+        </script>
 
-    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Half Slider by Start Bootstrap</h1>
-                <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the <code>half-slider.css</code>file.</p>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
-</body>
+    </body>
 </html>

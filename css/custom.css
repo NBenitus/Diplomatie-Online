@@ -1,11 +1,16 @@
+/**{
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+}*/
 
+/* Change background color of the body */
 .main-page
 {
-    background: #F5DEB3; 
-    color:black;
+    background: #E9DEC3;; 
     padding-top: 20px;
 }
 
+/* Set a border for the tables on the home page */
 .table-bordered,
 .table-bordered thead tr th,
 .table-bordered tbody tr td{
@@ -13,15 +18,161 @@
     border-style:solid;
 }
 
-.nav-second-level
-{
+/* Add extra space to the side nav bar */
+.navbar-collapse > ul{
     white-space: nowrap;
+    padding-right: 250px;
 }
 
-.theme-showcase{   
-    padding-left: 0px;    
+/* Remove left padding for the container in the middle of the screen */
+.container.vertically-aligned{   
+    padding-left: 20px;
 }
 
-.row > img {
+/* Padding for the logo */
+/*.row > img {
     padding-bottom: 20px;
+}*/
+
+/* Change font for the site */
+p, div, h1, h2, h3, h4, h5, h6{
+    font-family: 'Corben', Helvetica, Arial, sans-serif;
+}
+
+/* Add a shadow for the selected headers */
+h1, h2, h3, h4{
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 8em;
+    font-weight: bold;
+    font-family: 'Corben', Helvetica, Arial, sans-serif;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+/* Carousel play pause buttons options */
+#carouselButtons {
+    position: absolute;
+    bottom: 5px;
+    margin-left: 45%;
+}
+
+/* Changing the height of the carousel Play and Pause buttons */
+.btn-default{
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.container.marketing > h1{
+    padding-bottom: 30px;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background-image: inherit;
+    color: black;
+}
+
+.carousel-indicators{
+    padding-bottom: 0.5em;
+}
+
+/* Setting the color of the slide indicators */
+.carousel-indicators > li{
+    background:black;
+}
+
+/* Setting the color of the active slide indicator */
+.carousel-indicators .active{
+    background:blue;
+}
+
+.container-inner > div{
+    margin-bottom: 5em;
+}
+
+#myCarousel{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    min-height: 20em;
+    min-width: 50em;
+    width: 60%; 
+    margin: 0 auto;
+}
+
+.carousel-inner,
+#myCarousel,
+.carousel-inner > .item > .carousel-image{
+    height: 700px;
+}
+
+/* Setting up images background */
+
+#history-item1 {
+    background:url(../images/1900_P.png); 
+}
+#history-item2 {
+    background:url(../images/1900_A.png); 
+}
+#history-item3 {
+    background:url(../images/1901_P.png); 
+}
+#history-item4 {
+    background:url(../images/1901_A.png); 
+}
+#history-item5 {
+    background:url(../images/1902_P.png); 
+}
+#history-item6 {
+    background:url(../images/1902_A.png); 
+}
+
+#history-item1,
+#history-item2,
+#history-item3,
+#history-item4,
+#history-item5,
+#history-item6{
+    background-repeat: no-repeat;   
+    background-position: center center; 
+}
+
+.header-text{
+    text-align:center;
+}
+
+.orders{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    margin: 10px auto;
+    position: relative;
+    text-align:center;
+    vertical-align: top;
+}
+
+.orders-inner{
+    display: inline-block;
+    background: #C3AF8D;
+    border-width: 2px 2px 2px 2px;
+    border-color: #8C3A2E;
+    border-style: solid;
+    /*    background: url(../images/texture.png) repeat 0 0;
+        color: white;*/
+}
+
+.country{
+    display:inline-block;
+    vertical-align: top;
+    padding-left: 0px;
+    margin: 10px;
+    text-align: left;
+}
+
+.country h4{
+    margin-left: 20px;
 }
