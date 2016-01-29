@@ -27,15 +27,26 @@
     </head>
     <body class="main-page">
 
+        <div id="header"></div>
+
         <div id="wrapper">
-            <div id="header"></div>
-
-            <div class='header-text'>
-                <h1>Raptor vs Tullius </h1>
-                <h3>Historique de la partie</h2>
-            </div>
-
             <div class="container" role="main">
+
+                <div class='header-text'>
+                    <h1>Raptor vs Tullius </h1>
+                    <h3>Historique de la partie</h2>
+                </div>
+
+                <div class='game-menu'>
+                    <ul>
+                        <li><a href="#">Détails</a></li>
+                        <li><a href="#">Ordres</a></li>
+                        <li><a href="#">Résultats</a></li>
+                        <li><a href="#">Historique</a></li>
+                        <li><a href="#">Missives privées</a></li>
+                        <li><a href="#">Missives générales</a></li>
+                    </ul>
+                </div>
 
                 <!-- Carousel -->
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -91,7 +102,7 @@
                     <div class='orders-inner'>
                         <div class='country'>
                             <h4>Axe</h4>
-                            <ol>
+                            <ol id="axis">
                                 <li>Mun - Bou</li>
                                 <li>Kie - Pay</li>
                                 <li>Ank - Noi</li>
@@ -105,7 +116,7 @@
                         </div>
                         <div class='country'>
                             <h4>Alliés</h4>
-                            <ol>
+                            <ol id="allies">
                                 <li>Par - Bou </li>
                                 <li>sStp - Bot</li>
                                 <li>Edi - Nrd</li>
@@ -118,65 +129,65 @@
                                 <li>Bre - Atl</li>
                             </ol>
                         </div>
-                        <!--                    <div class='country'>
-                                                <h4>Alliés</h4>
-                                                <ol>
-                                                    <li>Par - Bou </li>
-                                                    <li>sStp - Bot</li>
-                                                    <li>Edi - Nrd</li>
-                                                    <li>Liv - Yor</li>
-                                                    <li>Lon - Man</li>
-                                                    <li>Tou S Par - Bou</li>
-                                                    <li>Var - Gal</li>
-                                                    <li>Mos - Ukr</li>
-                                                    <li>Ode - Cau</li>
-                                                    <li>Bre - Atl</li>
-                                                    <li>Par - Bou </li>
-                                                    <li>sStp - Bot</li>
-                                                    <li>Edi - Nrd</li>
-                                                    <li>Liv - Yor</li>
-                                                    <li>Lon - Man</li>
-                                                    <li>Tou S Par - Bou</li>
-                                                    <li>Var - Gal</li>
-                                                    <li>Mos - Ukr</li>
-                                                    <li>Ode - Cau</li>
-                                                    <li>Bre - Atl</li>
-                                                </ol>
-                                            </div>
-                                            <div class='country'>
-                                                <h4>Alliés</h4>
-                                                <ul>
-                                                    <li>Par - Bou </li>
-                                                    <li>sStp - Bot</li>
-                                                    <li>Edi - Nrd</li>
-                                                    <li>Liv - Yor</li>
-                                                    <li>Lon - Man</li>
-                                                </ul>
-                                            </div>
-                                            <div class='country'>
-                                                <h4>Alliés</h4>
-                                                <ul>
-                                                    <li>Par - Bou </li>
-                                                </ul>
-                                            </div>
-                                            <div class='country'>
-                                                <h4>Alliés</h4>
-                                                <ul>
-                                                    <li>Par - Bou </li>
-                                                    <li>sStp - Bot</li>
-                                                    <li>Edi - Nrd</li>
-                                                    <li>Liv - Yor</li>
-                                                    <li>Lon - Man</li>
-                                                </ul>
-                                            </div>
-                                            <div class='country'>
-                                                <h4>Alliés</h4>
-                                                <ul>
-                                                    <li>Par - Bou </li>
-                                                    <li>sStp - Bot</li>
-                                                    <li>Edi - Nrd</li>
-                                                </ul>
-                                            </div>-->
+                        <!--                                            <div class='country'>
+                                                                        <h4>Alliés</h4>
+                                                                        <ol>
+                                                                            <li>Par - Bou </li>
+                                                                            <li>sStp - Bot</li>
+                                                                            <li>Edi - Nrd</li>
+                                                                            <li>Liv - Yor</li>
+                                                                            <li>Lon - Man</li>
+                                                                            <li>Tou S Par - Bou</li>
+                                                                            <li>Var - Gal</li>
+                                                                            <li>Mos - Ukr</li>
+                                                                            <li>Ode - Cau</li>
+                                                                            <li>Bre - Atl</li>
+                                                                            <li>Par - Bou </li>
+                                                                            <li>sStp - Bot</li>
+                                                                            <li>Edi - Nrd</li>
+                                                                            <li>Liv - Yor</li>
+                                                                            <li>Lon - Man</li>
+                                                                            <li>Tou S Par - Bou</li>
+                                                                            <li>Var - Gal</li>
+                                                                            <li>Mos - Ukr</li>
+                                                                            <li>Ode - Cau</li>
+                                                                            <li>Bre - Atl</li>
+                                                                        </ol>
+                                                                    </div>
+                                                                    <div class='country'>
+                                                                        <h4>Alliés</h4>
+                                                                        <ul>
+                                                                            <li>Par - Bou </li>
+                                                                            <li>sStp - Bot</li>
+                                                                            <li>Edi - Nrd</li>
+                                                                            <li>Liv - Yor</li>
+                                                                            <li>Lon - Man</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class='country'>
+                                                                        <h4>Alliés</h4>
+                                                                        <ul>
+                                                                            <li>Par - Bou </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class='country'>
+                                                                        <h4>Alliés</h4>
+                                                                        <ul>
+                                                                            <li>Par - Bou </li>
+                                                                            <li>sStp - Bot</li>
+                                                                            <li>Edi - Nrd</li>
+                                                                            <li>Liv - Yor</li>
+                                                                            <li>Lon - Man</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class='country'>
+                                                                        <h4>Alliés</h4>
+                                                                        <ul>
+                                                                            <li>Par - Bou </li>
+                                                                            <li>sStp - Bot</li>
+                                                                            <li>Edi - Nrd</li>
+                                                                        </ul>
+                                                                    </div>-->
                     </div>
                 </div>
             </div>
@@ -191,9 +202,9 @@
 
         <!-- Script to Activate the Carousel -->
         <script>
-                            $('.carousel').carousel({
-                                interval: 6000 //changes the speed
-                            })
+            $('.carousel').carousel({
+                interval: 6000 //changes the speed
+            })
         </script>
 
     </body>

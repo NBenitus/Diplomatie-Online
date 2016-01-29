@@ -24,6 +24,10 @@
     padding-right: 250px;
 }
 
+/*.dropdown > ul{
+    display:inline-block;
+}*/
+
 /* Remove left padding for the container in the middle of the screen */
 .container.vertically-aligned{   
     padding-left: 20px;
@@ -102,6 +106,7 @@ h1, h2, h3, h4{
     min-width: 50em;
     width: 60%; 
     margin: 0 auto;
+    display:inline-block;
 }
 
 .carousel-inner,
@@ -173,6 +178,40 @@ h1, h2, h3, h4{
     text-align: left;
 }
 
+/* Add margin to name of each nationality */
 .country h4{
-    margin-left: 20px;
+    margin-left: 25px;
+}
+
+/* Add allies tank picture as bullet list icon */
+#allies{
+    list-style-image: url('../images/Tank_Blue.png');
+}
+
+/* Add axies tank picture as bullet list icon */
+#axis{
+    list-style-image: url('../images/Tank_Red.png');
+}
+
+.game-menu{
+    display:inline-block;
+    padding-right: 5px;
+    position: relative;
+    top: 160%;
+    transform: translateY(-160%);
+}
+
+.game-menu ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+.game-menu li{
+    display: block;
+    background: #C3AF8D;
+    border-width: 2px 2px 2px 2px;
+    border-color: #8C3A2E;
+    border-style: solid;
+    white-space: nowrap;
+    padding: 10px 10px 10px 10px;
 }
