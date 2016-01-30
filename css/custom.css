@@ -24,19 +24,29 @@
     padding-right: 250px;
 }
 
-/*.dropdown > ul{
-    display:inline-block;
-}*/
+.nav.navbar-nav a {
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.navbar-right > ul{
+    position: absolute;
+    right: 0;
+}
+
+.navbar-right .dropdown-menu{
+    right: auto;
+    left: 0;
+}
+
+.side-nav .open{
+  display:block;
+}
 
 /* Remove left padding for the container in the middle of the screen */
 .container.vertically-aligned{   
     padding-left: 20px;
 }
-
-/* Padding for the logo */
-/*.row > img {
-    padding-bottom: 20px;
-}*/
 
 /* Change font for the site */
 p, div, h1, h2, h3, h4, h5, h6{
@@ -47,7 +57,6 @@ p, div, h1, h2, h3, h4, h5, h6{
 h1, h2, h3, h4{
     text-shadow: 1px 1px 1px #ccc;
 }
-
 
 .title {
     text-align: center;
@@ -61,28 +70,20 @@ h1, h2, h3, h4{
 /* Carousel play pause buttons options */
 #carouselButtons {
     position: absolute;
-    bottom: 5px;
-    margin-left: 45%;
-}
-
-/* Changing the height of the carousel Play and Pause buttons */
-.btn-default{
-    height: 2.5em;
-    width: 2.5em;
-}
-
-.container.marketing > h1{
-    padding-bottom: 30px;
+    bottom: 8px;
+    margin-left: 48%;
 }
 
 .carousel-control.right,
 .carousel-control.left {
     background-image: inherit;
     color: black;
+    width: 8%;
 }
 
 .carousel-indicators{
-    padding-bottom: 0.5em;
+    margin-bottom: 0px;
+    bottom: 35px;
 }
 
 /* Setting the color of the slide indicators */
@@ -92,19 +93,13 @@ h1, h2, h3, h4{
 
 /* Setting the color of the active slide indicator */
 .carousel-indicators .active{
-    background:blue;
-}
-
-.container-inner > div{
-    margin-bottom: 5em;
+    background:red;
 }
 
 #myCarousel{
     margin-top: 0px;
-    margin-bottom: 20px;
-    min-height: 20em;
-    min-width: 50em;
-    width: 60%; 
+    min-height: 649px;
+    min-width: 667px;
     margin: 0 auto;
     display:inline-block;
 }
@@ -112,7 +107,8 @@ h1, h2, h3, h4{
 .carousel-inner,
 #myCarousel,
 .carousel-inner > .item > .carousel-image{
-    height: 700px;
+    height: 649px;
+    width: 667px;
 }
 
 /* Setting up images background */
@@ -156,7 +152,6 @@ h1, h2, h3, h4{
     width: auto;
     margin: 10px auto;
     position: relative;
-    text-align:center;
     vertical-align: top;
 }
 
@@ -166,8 +161,6 @@ h1, h2, h3, h4{
     border-width: 2px 2px 2px 2px;
     border-color: #8C3A2E;
     border-style: solid;
-    /*    background: url(../images/texture.png) repeat 0 0;
-        color: white;*/
 }
 
 .country{
@@ -180,7 +173,7 @@ h1, h2, h3, h4{
 
 /* Add margin to name of each nationality */
 .country h4{
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 /* Add allies tank picture as bullet list icon */
@@ -195,15 +188,13 @@ h1, h2, h3, h4{
 
 .game-menu{
     display:inline-block;
-    padding-right: 5px;
-    position: relative;
-    top: 160%;
-    transform: translateY(-160%);
+    vertical-align: top;
 }
 
 .game-menu ul{
     list-style-type: none;
     margin: 0;
+    padding-left: 0px;
 }
 
 .game-menu li{
@@ -214,4 +205,27 @@ h1, h2, h3, h4{
     border-style: solid;
     white-space: nowrap;
     padding: 10px 10px 10px 10px;
+}
+
+.game-menu a{
+    color: black;
+    display:block;
+}
+
+.game-menu li:hover{
+    background: red;
+    color: white;
+}
+
+.game-menu a:hover{
+    text-decoration: none;
+}
+
+.game-menu .active{
+    background: black;
+    color: white;
+}
+
+.game-menu .active a{
+    color: white;
 }
