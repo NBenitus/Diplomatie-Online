@@ -15,6 +15,7 @@
         <link href="css/sb-admin.css" rel="stylesheet">
         <link href="css/custom.css" rel="stylesheet">
         <link href="css/offcanvas.css" rel="stylesheet">
+        <link href="css/gamemenu.css" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico">
 
         <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
@@ -27,70 +28,70 @@
     </head>
     <body>
         <div id="header"></div>
-            <div class="container" id='container-main'>
-                <div class="row row-offcanvas row-offcanvas-right">
-                    <div class="col-xs-12 col-sm-9">
-                        <p class="pull-right visible-xs">
-                            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-                        </p>
-                        <div class="row">
-                            <div class="panel panel-danger">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Raptor vs Chessmaster</h3> 
-                                </div>
-                                <div class="panel-body" id="guts">
-                                    <div class='row'>
-                                        <div class="col-md-6">
-<!--                                            <form action="demo_form.asp">
-                                                <table id='table-orders'>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <img src='images/Valider.gif' alt='Ordre validé'>
-                                                            </td>
-                                                            <td>
-                                                                <img src='images/Tank_Red.png'>
-                                                            </td>
-                                                            <td>BER</td>
-                                                            <td>
-                                                                <select name="selectionField"> 
-                                                                    <option value="S" >S</option>
-                                                                    <option value="T" >T</option>
-                                                                    <option value="-" >-</option>
-                                                                    <option value="C" >C</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" name="fname" size="4" maxlength="4">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" name="fname2" size="4" maxlength="4">
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </form>-->
-                                            <img src="images/Diplomatie_Partie.png" class='main-image' alt='Main map'>
-                                        </div>
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-9 c">
+                    <div class="row">
+                        <div class="panel panel-danger" id='main-content'>
+                            <div class="panel-heading" >
+                                <h3 class="panel-title">Raptor vs Chessmaster</h3> 
+                                <p class="visible-xs">
+                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+                                </p>
+                            </div>
+                            <div class="panel-body" id="guts">
+                                <div class='row'>
+                                    <div class="col-md-6">
+                                        <!--                                            <form action="demo_form.asp">
+                                                                                        <table id='table-orders'>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <img src='images/Valider.gif' alt='Ordre validé'>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <img src='images/Tank_Red.png'>
+                                                                                                    </td>
+                                                                                                    <td>BER</td>
+                                                                                                    <td>
+                                                                                                        <select name="selectionField"> 
+                                                                                                            <option value="S" >S</option>
+                                                                                                            <option value="T" >T</option>
+                                                                                                            <option value="-" >-</option>
+                                                                                                            <option value="C" >C</option>
+                                                                                                        </select>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <input type="text" name="fname" size="4" maxlength="4">
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <input type="text" name="fname2" size="4" maxlength="4">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </form>-->
+                                        <img src="images/Diplomatie_Partie.png" class='main-image' alt='Main map'>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item active">Détails</a>
-                            <a href="#" class="list-group-item">Ordres</a>
-                            <a href="#" class="list-group-item">Résultats</a>
-                            <a href="#" class="list-group-item">Historique</a>
-                            <a href="#" class="list-group-item">Missives privées</a>
-                            <a href="#" class="list-group-item">Missives générales</a>
-                        </div>
-                    </div><!--/.sidebar-offcanvas-->
                 </div>
+
+
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item active">Détails</a>
+                        <a href="#" class="list-group-item">Ordres</a>
+                        <a href="#" class="list-group-item">Résultats</a>
+                        <a href="historique.html" class="list-group-item">Historique</a>
+                        <a href="#" class="list-group-item">Missives privées</a>
+                        <a href="#" class="list-group-item">Missives générales</a>
+                    </div>
+                </div><!--/.sidebar-offcanvas-->
             </div>
+        </div>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

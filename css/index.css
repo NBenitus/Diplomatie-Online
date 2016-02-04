@@ -1,0 +1,51 @@
+/* Properties for the title on the home page */
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'Corben', Helvetica, Arial, sans-serif;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    white-space:pre-line;
+}
+
+/* Add a shadow for the selected headers */
+h1{
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+/* Set a border for the tables on the home page */
+.table-bordered,
+.table-bordered thead tr th,
+.table-bordered tbody tr td{
+    border-color:black;
+    border-style:solid;
+    white-space: nowrap;
+}
+
+/* Minimum width for the game master column */
+#name_gamemaster{
+    min-width: 150px; 
+    max-width: 150px;
+}
+
+/* Minimum width for the game's name column */
+#name_games{
+    min-width: 250px;
+    max-width: 250px;
+}
+
+/* Display ... when there is an overflow for the game master and game's name columns */
+#name_games,
+#name_gamemaster{
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 768px)
+{
+    #wrapper {
+        padding-left: 240px;
+        margin-left: 20px;
+    }
+}

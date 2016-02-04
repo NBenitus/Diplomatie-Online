@@ -8,7 +8,8 @@ body {
  * Off Canvas
  * --------------------------------------------------
  */
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 600px) {
   .row-offcanvas {
     position: relative;
     -webkit-transition: all .25s ease-out;
@@ -26,25 +27,58 @@ body {
 
   .row-offcanvas-right
   .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
+    right: -38%;
   }
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
+    left: -38%; /* 6 columns */
   }
 
   .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
+    right: 15%; /* 6 columns */
   }
 
   .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
+    left: 15%; /* 6 columns */
   }
 
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 50%; /* 6 columns */
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .row-offcanvas-right.active {
+        right: 35%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+        left: 35%; /* 6 columns */
+  }
+}
+
+@media screen and (max-width: 450px) {
+    
+    .row-offcanvas-right.active {
+        right: 30%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+        left: 30%; /* 6 columns */
+  }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .row-offcanvas-right.active {
+        right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+        left: 50%; /* 6 columns */
   }
 }
