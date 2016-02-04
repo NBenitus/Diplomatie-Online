@@ -1,144 +1,133 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-
+        
+        <title>Jeu Diplomacy en ligne</title>
+        
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link href="css/dashboard.css" rel="stylesheet">
         <link href="css/sb-admin.css" rel="stylesheet">
-        <link href="css/metisMenu.min.css" rel="stylesheet">
         <link href="css/custom.css" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico">
-
+        
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+        <script type='text/javascript' src='js/dynamicpage.js'></script>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script>
             $(function () {
                 $("#header").load("header.html");
             });
         </script> 
-
     </head>
-    <body class="main-page">
-
+    <body>
         <div id="header"></div>
 
         <div id="wrapper">
             <div class="container" role="main">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Raptor vs Chessmaster</h3>
-                    </div>
-                    <div class="panel-body">
-                        <!-- Carousel -->
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!--       Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                                <li data-target="#myCarousel" data-slide-to="3"></li>
-                                <li data-target="#myCarousel" data-slide-to="4"></li>
-                                <li data-target="#myCarousel" data-slide-to="5"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <div id="history-item1" class="carousel-image">&nbsp;</div>
+                <section id="main-content">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Raptor vs Chessmaster</h3>
+                        </div>
+                        <div class="panel-body" id="guts">
+                            <!-- Carousel -->
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!--       Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+<!--                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>-->
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="active item">
+                                        <div class="slider-size">
+                                            <img src="images/1900_P.png" style="height: 100%;" />
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="slider-size">
+                                        <img src="images/1900_A.png" style="height: 100%;" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="item">
-                                    <div id="history-item2" class="carousel-image">&nbsp;</div>
-                                </div>
-                                <div class="item">
-                                    <div id="history-item3" class="carousel-image">&nbsp;</div>
-                                </div>
-                                <div class="item">
-                                    <div id="history-item4" class="carousel-image">&nbsp;</div>
-                                </div>
-                                <div class="item">
-                                    <div id="history-item5" class="carousel-image">&nbsp;</div>
-                                </div>
-                                <div class="item">
-                                    <div id="history-item6" class="carousel-image">&nbsp;</div>
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                                <div id="carouselButtons">
+                                    <button id="playButton" type="button" class="btn btn-default btn-xs">
+                                        <span class="fa fa-play-circle"></span>
+                                    </button>
+                                    <button id="pauseButton" type="button" class="btn btn-default btn-xs">
+                                        <span class="fa fa-pause-circle"></span>
+                                    </button>
                                 </div>
                             </div>
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
 
-                            <div id="carouselButtons">
-                                <button id="playButton" type="button" class="btn btn-default btn-xs">
-                                    <span class="fa fa-play-circle"></span>
-                                </button>
-                                <button id="pauseButton" type="button" class="btn btn-default btn-xs">
-                                    <span class="fa fa-pause-circle"></span>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class='game-menu'>
-                            <ul>
-                                <li><a href="#">Détails</a></li>
-                                <li><a href="#">Ordres</a></li>
-                                <li><a href="#">Résultats</a></li>
-                                <li class='active'><a href="#">Historique</a></li>
-                                <li><a href="#">Missives privées</a></li>
-                                <li><a href="#">Missives générales</a></li>
-                            </ul>
-                        </div>
-
-                        <div class='orders'>
-                            <div class='orders-inner'>
-                                <div class='country'>
-                                    <h4><img src='images/Axe.gif'> Axe</h4>
-                                    <ol id="axis">
-                                        <li>Mun - Bou</li>
-                                        <li>Kie - Pay</li>
-                                        <li>Ank - Noi</li>
-                                        <li>Smy - Cau</li>
-                                        <li>Ber - Sil</li>
-                                        <li>Bud - Rou</li>
-                                        <li>Vie - Gal</li>
-                                        <li>Con - Bul</li>
-                                        <li>Tri - Mon</li>
-                                    </ol>
-                                </div>
-                                <div class='country'>
-                                    <h4><img src='images/Allies.gif'> Allies</h4>
-                                    <ol id="allies">
-                                        <li>Par - Bou </li>
-                                        <li>sStp - Bot</li>
-                                        <li>Edi - Nrd</li>
-                                        <li>Liv - Yor</li>
-                                        <li>Lon - Man</li>
-                                        <li>Tou S Par - Bou</li>
-                                        <li>Var - Gal</li>
-                                        <li>Mos - Ukr</li>
-                                        <li>Ode - Cau</li>
-                                        <li>Bre - Atl</li>
-                                    </ol>
+                            <div class='orders'>
+                                <div class='orders-inner'>
+                                    <div class='country'>
+                                        <h4><img src='images/Axe.gif'> Axe</h4>
+                                        <ol id="axis">
+                                            <li class='army'>Mun - Bou</li>
+                                            <li class='fleet'>Kie - Pay</li>
+                                            <li class='fleet'>Ank - Noi</li>
+                                            <li class='army'>Smy - Cau</li>
+                                            <li class='army'>Ber - Sil</li>
+                                            <li class='army'>Bud - Rou</li>
+                                            <li class='army'>Vie - Gal</li>
+                                            <li class='army'>Con - Bul</li>
+                                            <li class='fleet'>Tri - Mon</li>
+                                        </ol>
+                                    </div>
+                                    <div class='country'>
+                                        <h4><img src='images/Allies.gif'> Alliés</h4>
+                                        <ol id="allies">
+                                            <li class='army'>Par - Bou </li>
+                                            <li class='fleet'>sStp - Bot</li>
+                                            <li class='fleet'>Edi - Nrd</li>
+                                            <li class='army'>Liv - Yor</li>
+                                            <li class='fleet'>Lon - Man</li>
+                                            <li class='army'>Tou S Par - Bou</li>
+                                            <li class='army'>Var - Gal</li>
+                                            <li class='army'>Mos - Ukr</li>
+                                            <li class='fleet'>Ode - Cau</li>
+                                            <li class='fleet'>Bre - Atl</li>
+                                        </ol>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                    <div class='game-menu' id="dynamic">
+                        <ul>
+                            <li><a href="details.html">Détails</a></li>
+                            <li><a href="#">Ordres</a></li>
+                            <li><a href="#">Résultats</a></li>
+                            <li class='active'><a href="#">Historique</a></li>
+                            <li><a href="#">Missives privées</a></li>
+                            <li><a href="#">Missives générales</a></li>
+                        </ul>
+                    </div>
+                </section>
             </div>
         </div>
-
-
-
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>

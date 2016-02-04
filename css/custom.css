@@ -1,13 +1,28 @@
 /**{
     border-width: 1px 1px 1px 1px;
     border-style: solid;
+    border-color: pink;
 }*/
 
 /* Change background color of the body */
-.main-page
-{
+body{
     background: #E9DEC3;; 
-    padding-top: 20px;
+}
+
+/* Setting the width of the side panel */
+.side-nav{
+    width: 240px;
+}
+
+/* Add a margin to the sub menu options of the side menu */
+.side-nav ul{
+    margin-left: 10px;
+}
+
+/* Add padding at the right of the top menu bar and align the section of the top bar to the right */
+.navbar-right > ul{
+    position: absolute;
+    right: 0;
 }
 
 /* Set a border for the tables on the home page */
@@ -16,36 +31,32 @@
 .table-bordered tbody tr td{
     border-color:black;
     border-style:solid;
-}
-
-/* Add extra space to the side nav bar */
-.navbar-collapse > ul{
     white-space: nowrap;
-    padding-right: 250px;
 }
 
+/* Minimum width for the game master column */
+#name_gamemaster{
+    min-width: 150px; 
+    max-width: 150px;
+}
+
+/* Minimum width for the game's name column */
+#name_games{
+    min-width: 250px;
+    max-width: 250px;
+}
+
+/* Display ... when there is an overflow for the game master and game's name columns */
+#name_games,
+#name_gamemaster{
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+/* Add padding between menu options of the top bar */
 .nav.navbar-nav a {
     padding-left: 10px;
-    padding-right: 0px;
-}
-
-.navbar-right > ul{
-    position: absolute;
-    right: 0;
-}
-
-.navbar-right .dropdown-menu{
-    right: auto;
-    left: 0;
-}
-
-.side-nav .open{
-  display:block;
-}
-
-/* Remove left padding for the container in the middle of the screen */
-.container.vertically-aligned{   
-    padding-left: 20px;
+    padding-right: 10px;
 }
 
 /* Change font for the site */
@@ -54,10 +65,11 @@ p, div, h1, h2, h3, h4, h5, h6{
 }
 
 /* Add a shadow for the selected headers */
-h1, h2, h3, h4{
+h1{
     text-shadow: 1px 1px 1px #ccc;
 }
 
+/* Properties for the title on the home page */
 .title {
     text-align: center;
     color: #fff;
@@ -67,6 +79,24 @@ h1, h2, h3, h4{
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 
+/* TEST ----- Show panel side by side with the menu on the right */
+.panel,
+.panel-body,
+.row,
+.col-md-6{
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+/*    width: 100%;*/
+}
+
+/* Add left and top margins to the main container of the page */
+#wrapper{
+    float: left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
 /* Carousel play pause buttons options */
 #carouselButtons {
     position: absolute;
@@ -74,6 +104,7 @@ h1, h2, h3, h4{
     margin-left: 48%;
 }
 
+/* Set the location of the arrow controls for the carousel and remove gradient background*/
 .carousel-control.right,
 .carousel-control.left {
     background-image: inherit;
@@ -81,6 +112,7 @@ h1, h2, h3, h4{
     width: 8%;
 }
 
+/* Set the location of the slide indications of the carousel */
 .carousel-indicators{
     margin-bottom: 0px;
     bottom: 35px;
@@ -96,56 +128,32 @@ h1, h2, h3, h4{
     background:red;
 }
 
+/* Carousel properties */
 #myCarousel{
-    margin-top: 0px;
-    min-height: 649px;
-    min-width: 667px;
     margin: 0 auto;
-    display:inline-block;
+    height: 100%;
+    width: 100%;
+    min-width: 400px;
 }
 
+/* Size of the carousel */
 .carousel-inner,
-#myCarousel,
 .carousel-inner > .item > .carousel-image{
-    height: 649px;
-    width: 667px;
+    height: 100%;
+    width: 100%;
 }
 
-/* Setting up images background */
-
-#history-item1 {
-    background:url(../images/1900_P.png); 
-}
-#history-item2 {
-    background:url(../images/1900_A.png); 
-}
-#history-item3 {
-    background:url(../images/1901_P.png); 
-}
-#history-item4 {
-    background:url(../images/1901_A.png); 
-}
-#history-item5 {
-    background:url(../images/1902_P.png); 
-}
-#history-item6 {
-    background:url(../images/1902_A.png); 
+/* Set heigth of the carousel images */
+.slider-size{
+    height: auto;
 }
 
-#history-item1,
-#history-item2,
-#history-item3,
-#history-item4,
-#history-item5,
-#history-item6{
-    background-repeat: no-repeat;   
-    background-position: center center; 
+/* Set width of the carousel images */
+.slider-size > img {
+    width: 100%;
 }
 
-.header-text{
-    text-align:center;
-}
-
+/* Visual settings to the orders section */
 .orders{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -155,6 +163,7 @@ h1, h2, h3, h4{
     vertical-align: top;
 }
 
+/* Visual settings to the inner order section */
 .orders-inner{
     display: inline-block;
     background: #C3AF8D;
@@ -176,56 +185,109 @@ h1, h2, h3, h4{
     margin-left: 15px;
 }
 
-/* Add allies tank picture as bullet list icon */
-#allies{
+/* Add allies tank picture as bullet list icon for armies */
+#allies > .army{
     list-style-image: url('../images/Tank_Blue.png');
 }
 
-/* Add axies tank picture as bullet list icon */
-#axis{
+/* Add allies fleet picture as bullet list icon for fleets */
+#allies > .fleet{
+    list-style-image: url('../images/Fleet_Blue.png');
+}
+
+/* Add axis tank picture as bullet list icon for armies */
+#axis > .army{
     list-style-image: url('../images/Tank_Red.png');
 }
 
-.game-menu{
-    display:inline-block;
-    vertical-align: top;
+/* Add axis fleet picture as bullet list icon for fleets */
+#axis > .fleet{
+    list-style-image: url('../images/Fleet_Red.png');
 }
 
-.game-menu ul{
-    list-style-type: none;
-    margin: 0;
-    padding-left: 0px;
-}
-
-.game-menu li{
-    display: block;
-    background: #C3AF8D;
-    border-width: 2px 2px 2px 2px;
-    border-color: #8C3A2E;
+/* Remove spacing between elements for orders */
+#table-orders{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-width: 1px 1px 1px 1px;
     border-style: solid;
-    white-space: nowrap;
-    padding: 10px 10px 10px 10px;
+    /*    padding: 10px 10px 10px 10px;*/
 }
 
-.game-menu a{
-    color: black;
-    display:block;
+#table-orders td{
+    padding: 5px 2px 5px 2px;
 }
 
-.game-menu li:hover{
-    background: red;
-    color: white;
+@media (min-width: 768px) {    
+    /*    .dropdown a{
+            float: left;
+            width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }*/
+    
+        /* Hide menu */
+/*    .sidebar-offcanvas{
+        right: -100%;
+    }*/
+
+/*     Toggle button 
+    .visible-lg, .visible-md, .visible-sm, .visible-xs{
+        display:block !important;
+        float: right;
+    }*/
+    
+    .col-xs-12.col-sm-9{
+            display:block;
+            padding-left: 0px;
+            padding-right: 0px;
+    }
+    
+    .row{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+/*    .panel{
+        width: 60%;
+    }*/
+    
+        .main-image{
+        width: 60%;
+        height: auto;
+    }
 }
 
-.game-menu a:hover{
-    text-decoration: none;
-}
+@media (min-width: 1200px) {    
+    
+/*.side-nav {		
+    position: fixed;		
+    top: 51px;		
+    left: 225px;		
+    width: 225px;		
+    margin-left: -225px;		
+    border: none;		
+    border-radius: 0;		
+    overflow-y: auto;		
+    background-color: #222;		
+    bottom: 0;		
+    overflow-x: hidden;		
+    padding-bottom: 40px;		
+}			
+    .navbar-nav {		
+        float: left;		
+        margin: 0;		
+    }*/
 
-.game-menu .active{
-    background: black;
-    color: white;
-}
 
-.game-menu .active a{
-    color: white;
+
+    /* Hide menu */
+    .sidebar-offcanvas{
+/*        right: -100%;*/
+    }
+
+    .visible-lg, .visible-md, .visible-sm, .visible-xs{
+        display:none !important;
+    }
 }
