@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jeu Diplomacy en ligne</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/sb-admin.css" rel="stylesheet">
-        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico">
 
@@ -25,9 +25,11 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
 
-        <div id="wrapper">
+<!--        <div id="wrapper">-->
 
             <div id="header"></div>
+            
+            <div id="page-wrapper">
 
             <div class="container" role="main">
                 <div class="row">
@@ -42,7 +44,7 @@
                     <h4>Derniers fils actifs</h4>
                     <div class='row'>
                         <div class="col-md-6">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-responsive">
                                 <tbody>
                                     <tr>
                                         <td>18:20:15</td>
@@ -76,7 +78,7 @@
                     <h4>Nouveaux fils</h4>
                     <div class='row'>
                         <div class="col-md-6">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-responsive">
                                 <tbody>
                                     <tr>
                                         <td>12:10:14</td>
@@ -114,77 +116,77 @@
                     </h3>
                     <div class='row'>    
                         <div class="col-md-6">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-responsive">
                                 <thead>
                                     <tr>
-                                        <th id='name_games'>Nom des parties</th>
-                                        <th>Joueurs</th>
-                                        <th id='name_gamemaster'>Maître de jeu</th>
-                                        <th>Date fin</th>
-                                        <th>Saison</th>
-                                        <th>Etape</th>
-                                        <th>Année</th>
-                                        <th>Nationalité</th>
-                                        <th>Ordres</th>
-                                        <th>News</th>
-                                        <th>Limite</th>
+                                        <th id='name-games'>Nom des parties</th>
+                                        <th class='optional-table'>Joueurs</th>
+                                        <th class='optional-table' id='name_gamemaster'>Maître de jeu</th>
+                                        <th class='optional-table'>Fin</th>
+                                        <th class='optional-table'>Saison</th>
+                                        <th class='optional-table'>Etape</th>
+                                        <th class='optional-table'>Année</th>
+                                        <th class='optional-table'>Pays</th>
+                                        <th class='mandatory-table'>Ordres</th>
+                                        <th class='mandatory-table'>News</th>
+                                        <th class='mandatory-table'>Limite</th>
                                     </tr>
                                 </thead>  
                                 <tbody>
                                     <tr>
-                                        <td id='name_games'>
+                                        <td id='name-games'>
                                             <a href="historique.html">T-Nego 2016 Cupidité</a>
                                         </td>
-                                        <td>7/7</td>
-                                        <td id='name_gamemaster'>
+                                        <td class='optional-table'>7/7</td>
+                                        <td class='optional-table' id='name_gamemaster'>
                                             <a href="#">Olyer</a>
                                         </td>
-                                        <td>1907</td>
-                                        <td><img src='images/Saison.gif' alt="Saison"></td>
-                                        <td><img src='images/Etape.gif' alt="Étape"></td>
-                                        <td>1902</td>
-                                        <td><img src='images/Nationalité.gif' alt="Nationalité"></td>
-                                        <td>Oui</td>
-                                        <td> <a href="#">3</a>/<a href="#">0</a></td>
-                                        <td><img src='images/DL.gif' alt="Date Limite"></td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1902</td>
+                                        <td class='optional-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'> <a href="#">3</a>/<a href="#">0</a></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
                                     </tr>
                                     <tr>
-                                        <td id='name_games'>
+                                        <td id='name-games'>
                                             <a href="#">T-Nego 2016 Jalousie</a>
                                         </td>
-                                        <td>7/7</td>
-                                        <td id='name_gamemaster'>
+                                        <td class='optional-table'>7/7</td>
+                                        <td class='optional-table' id='name_gamemaster'>
                                             <a href="#">Olyer</a>
                                         </td>
-                                        <td>1907</td>
-                                        <td><img src='images/Saison.gif' alt="Saison"></td>
-                                        <td><img src='images/Etape.gif' alt="Étape"></td>
-                                        <td>1902</td>
-                                        <td><img src='images/Nationalité.gif' alt="Nationalité"></td>
-                                        <td>Oui</td>
-                                        <td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1902</td>
+                                        <td class='optional-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'>
                                             <a href="#">1</a>/<a href="#">1</a>
                                         </td>
-                                        <td><img src='images/DL.gif' alt="Date Limite"></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
                                     </tr>
                                     <tr>
-                                        <td id='name_games'>
+                                        <td id='name-games'>
                                             <a href="#">T-Nego 2016 Luxure</a>
                                         </td>
-                                        <td>7/7</td>
-                                        <td id='name_gamemaster'>
+                                        <td class='optional-table'>7/7</td>
+                                        <td class='optional-table' id='name_gamemaster'>
                                             <a href="#">Olyer</a>
                                         </td>
-                                        <td>1907</td>
-                                        <td><img src='images/Saison.gif' alt="Saison"></td>
-                                        <td><img src='images/Etape.gif' alt="Étape"></td>
-                                        <td>1901</td>
-                                        <td><img src='images/Nationalité.gif' alt="Nationalité"></td>
-                                        <td>Oui</td>
-                                        <td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1901</td>
+                                        <td class='optional-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'>
                                             <a href="#">2</a>/<a href="#">4</a>
                                         </td>
-                                        <td><img src='images/DL.gif' alt="Date Limite"></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -197,75 +199,75 @@
 
                     <div class='row'>
                         <div class="col-md-6">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-responsive">
                                 <thead>
                                     <tr>
-                                        <th id='name_games'>Nom des parties</th>
-                                        <th>Joueurs</th>
-                                        <th id='name_gamemaster'>Maître de jeu</th>
-                                        <th>Date fin</th>
-                                        <th>Saison</th>
-                                        <th>Etape</th>
-                                        <th>Année</th>
-                                        <th>Nationalité</th>
-                                        <th>Ordres</th>
-                                        <th>News</th>
-                                        <th>Limite</th>
+                                        <th id='name-games'>Nom des parties</th>
+                                        <th class='optional-table'>Joueurs</th>
+                                        <th class='optional-table' id='name_gamemaster'>Maître de jeu</th>
+                                        <th class='optional-table'>Fin</th>
+                                        <th class='optional-table'>Saison</th>
+                                        <th class='optional-table'>Etape</th>
+                                        <th class='optional-table'>Année</th>
+                                        <th class='optional-table'>Pays</th>
+                                        <th class='mandatory-table'>Ordres</th>
+                                        <th class='mandatory-table'>News</th>
+                                        <th class='mandatory-table'>Limite</th>
                                     </tr>
                                 </thead>  
                                 <tbody>
                                     <tr>
-                                        <td id='name_games'>
+                                        <td id='name-games'>
                                             <a href="#">Raptor vs Tullius </a>
                                         </td>
-                                        <td>2/2</td>
-                                        <td id='name_gamemaster'>
+                                        <td class='optional-table'>2/2</td>
+                                        <td class='optional-table' id='name_gamemaster'>
                                             <a href="#">Raptor</a>
                                         </td>
-                                        <td>1907</td>
-                                        <td><img src='images/Saison.gif' alt="Saison"></td>
-                                        <td><img src='images/Etape.gif' alt="Étape"></td>
-                                        <td>1905</td>
-                                        <td><img src='images/Nationalité.gif' alt="Nationalité"></td>
-                                        <td>Oui</td>
-                                        <td><a href="#">0</a>/<a href="#">0</a></td>
-                                        <td><img src='images/DL.gif' alt="Date Limite"></td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1905</td>
+                                        <td class='optional-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'><a href="#">0</a>/<a href="#">0</a></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
                                     </tr>
                                     <tr>
-                                        <td id='name_games'>
+                                        <td id='name-games'>
                                             <a href="#">Raptor vs NoahCullen</a>
                                         </td>
-                                        <td>2/2</td>
-                                        <td id='name_gamemaster'>
+                                        <td class='optional-table'>2/2</td>
+                                        <td class='optional-table' id='name_gamemaster'>
                                             <a href="#">Raptor</a>
                                         </td>
-                                        <td>1907</td>
-                                        <td><img src='images/Saison.gif' alt="Saison"></td>
-                                        <td><img src='images/Etape.gif' alt="Étape"></td>
-                                        <td>1903</td>
-                                        <td><img src='images/Nationalité.gif' alt="Nationalité"></td>
-                                        <td>Non</td>
-                                        <td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1903</td>
+                                        <td class='optional-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Non</td>
+                                        <td class='mandatory-table'>
                                             <a href="#">1</a>/<a href="#">0</a>
                                         </td>
-                                        <td><img src='images/DL.gif' alt="Date Limite"></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
                                     </tr>
                                     <tr>
-                                        <td id='name_games'>
+                                        <td id='name-games'>
                                             <a href="#">Raptor vs Zoboton</a>
                                         </td>
-                                        <td>2/2</td>
-                                        <td id='name_gamemaster'>
+                                        <td class='optional-table'>2/2</td>
+                                        <td class='optional-table' id='name_gamemaster'>
                                             <a href="#">Zoboton</a>
                                         </td>
-                                        <td>1907</td>
-                                        <td><img src='images/Saison.gif' alt="Saison"></td>
-                                        <td><img src='images/Etape.gif' alt="Étape"></td>
-                                        <td>1901</td>
-                                        <td><img src='images/Nationalité.gif' alt="Nationalité"></td>
-                                        <td>Oui</td>
-                                        <td><a href="#">0</a>/<a href="#">5</a></td>
-                                        <td><img src='images/DL.gif' alt="Date Limite"></td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1901</td>
+                                        <td class='optional-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'><a href="#">0</a>/<a href="#">5</a></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
                                     </tr>
                                 </tbody>
                             </table>

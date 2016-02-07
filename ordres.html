@@ -10,14 +10,15 @@
 
         <title>Jeu Diplomacy en ligne</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" >
         <link href="css/sb-admin.css" rel="stylesheet">
-        <link href="css/custom.css" rel="stylesheet">
-        <link href="css/offcanvas.css" rel="stylesheet">
-        <link href="css/gamemenu.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/panel.css" rel="stylesheet">
+        <link href="css/orders.css" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
         <script type='text/javascript' src='js/dynamicpage.js'></script>
         <script>
@@ -25,76 +26,539 @@
                 $("#header").load("header.html");
             });
         </script> 
+        <script>
+            $(function () {
+                $("#game-menu").load("gamemenu.html");
+            });
+        </script> 
     </head>
     <body>
         <div id="header"></div>
-        <div class="container">
-            <div class="row row-offcanvas row-offcanvas-right">
-                <div class="col-xs-12 col-sm-9 c">
-                    <div class="row">
-                        <div class="panel panel-danger" id='main-content'>
-                            <div class="panel-heading" >
-                                <h3 class="panel-title">Raptor vs Chessmaster</h3> 
-                                <p class="visible-xs">
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
-                                </p>
-                            </div>
-                            <div class="panel-body" id="guts">
-                                <div class='row'>
-                                    <div class="col-md-6">
-                                        <!--                                            <form action="demo_form.asp">
-                                                                                        <table id='table-orders'>
-                                                                                            <tbody>
-                                                                                                <tr>
-                                                                                                    <td>
-                                                                                                        <img src='images/Valider.gif' alt='Ordre validé'>
-                                                                                                    </td>
-                                                                                                    <td>
-                                                                                                        <img src='images/Tank_Red.png'>
-                                                                                                    </td>
-                                                                                                    <td>BER</td>
-                                                                                                    <td>
-                                                                                                        <select name="selectionField"> 
-                                                                                                            <option value="S" >S</option>
-                                                                                                            <option value="T" >T</option>
-                                                                                                            <option value="-" >-</option>
-                                                                                                            <option value="C" >C</option>
-                                                                                                        </select>
-                                                                                                    </td>
-                                                                                                    <td>
-                                                                                                        <input type="text" name="fname" size="4" maxlength="4">
-                                                                                                    </td>
-                                                                                                    <td>
-                                                                                                        <input type="text" name="fname2" size="4" maxlength="4">
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </form>-->
-                                        <img src="images/Diplomatie_Partie.png" class='main-image' alt='Main map'>
-                                    </div>
-                                </div>
-                            </div>
+        <div id='page-wrapper'>
+            <div class="container">
+                <div class="panel panel-danger" id="main-content">
+                    <div class="panel-heading" >
+                        <h3 class="panel-title">Raptor vs Chessmaster</h3> 
+                    </div>
+                    <div class="panel-body ordres" id="guts">
+                        <div id="game-menu"></div>
+                        <div>
+                            <form action="demo_form.asp">
+                                <table class='table-responsive' id='table-orders'>
+                                    <tr>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Fleet_Red.png'>
+                                                        </td>
+                                                        <td class='region'>ADR</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>ALP</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>APU</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>BER</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>BOH</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>EDI</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Fleet_Red.png'>
+                                                        </td>
+                                                        <td class='region'>GRO</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Fleet_Red.png'>
+                                                        </td>
+                                                        <td class='region'>ION</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>LIT</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Fleet_Red.png'>
+                                                        </td>
+                                                        <td class='region'>LON</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+
+
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>MOS</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>MUN</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>PIE</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>PRU</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>     
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Fleet_Red.png'>
+                                                        </td>
+                                                        <td class='region'>SMY</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>VAR</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <table>
+                                                    <tr>
+                                                        <td class='orders-validated'>
+                                                            <img src='images/Valider.gif' alt='Ordre validé'>
+                                                        </td>
+                                                        <td class='type-army'>
+                                                            <img src='images/Tank_Red.png'>
+                                                        </td>
+                                                        <td class='region'>VEN</td>
+                                                        <td class='army-order'>
+                                                            <select name="selectionField"> 
+                                                                <option value="S" >S</option>
+                                                                <option value="T" >T</option>
+                                                                <option value="-" >-</option>
+                                                                <option value="C" >C</option>
+                                                            </select>
+                                                        </td>
+                                                        <td class='first-army-text'>
+                                                            <input type="text" name="fname" size="4" maxlength="4">
+                                                        </td>
+                                                        <td class='second-army-text'>
+                                                            <input type="text" name="fname2" size="4" maxlength="4">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                        <div>
+                            <img src="images/Diplomatie_Partie.png" class='main-image' alt='Main map'>
                         </div>
                     </div>
+
                 </div>
-
-
-                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item active">Détails</a>
-                        <a href="#" class="list-group-item">Ordres</a>
-                        <a href="#" class="list-group-item">Résultats</a>
-                        <a href="historique.html" class="list-group-item">Historique</a>
-                        <a href="#" class="list-group-item">Missives privées</a>
-                        <a href="#" class="list-group-item">Missives générales</a>
-                    </div>
-                </div><!--/.sidebar-offcanvas-->
             </div>
         </div>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
         <script>window.jQuery || document.write('<script src=".js/jquery.min.js"><\/script>')</script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/offcanvas.js"></script>

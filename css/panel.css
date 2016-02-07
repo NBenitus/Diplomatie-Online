@@ -1,0 +1,84 @@
+/* Remove margin for the panel div */
+.panel{
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+/* Removing padding for the objects */
+.panel-body{
+    padding: 10px;
+}
+
+/*.panel li:hover{
+    background: white;
+}*/
+
+/* Highlight the active page in the menu */
+.panel-body.details li.details,
+.panel-body.resultats li.resultats,
+.panel-body.ordres li.ordres,
+.panel-body.historique li.historique,
+.panel-body.missives li.missives { 
+    background: #C3AF8D;
+    border-width: 2px 2px 2px 2px;
+    border-color: #8C3A2E;
+    border-style: solid;
+}
+
+.panel-body.details li.details a,
+.panel-body.resultats li.resultats a,
+.panel-body.ordres li.ordres a ,
+.panel-body.historique li.historique a,
+.panel-body.missives li.missives a { 
+    color: black;
+}
+
+.panel-body.details li.details a:hover,
+.panel-body.resultats li.resultats a:hover,
+.panel-body.ordres li.ordres a:hover,
+.panel-body.historique li.historique a:hover,
+.panel-body.missives li.missives a:hover { 
+    color: white;
+}
+
+.panel-body a:hover{
+    color: pink;
+}
+
+@media (min-width: 320px) { 
+
+    /* Set width of the panel */
+    .panel{
+        display:inline-block;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    /* Resize the image according to the width of the panel */
+    .main-image{
+        width: 100%;
+        height: auto;
+    }
+
+    #page-wrapper{
+        padding-left: 0px;
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 565px) {    
+    .navbar-ex2-collapse.collapse {
+        display: block !important;
+    }
+    
+    #game-menu-header{
+        display: none !important;
+    }
+}
+
+@media (min-width: 940px) { 
+
+    #page-wrapper{
+        padding-left: 240px;
+    }
+}

@@ -34,7 +34,7 @@
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 /* Size of the carousel */
@@ -44,80 +44,8 @@
     width: 100%;
 }
 
-/* Set heigth of the carousel images */
-.panel{
-    width: 668px;
-     display:inline-block;
-}
-
 /* Set width of the carousel images */
 .slider-size > img {
     width: 100%;
     height: auto;
 }
-
-/* Visual settings to the orders section */
-.orders{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: auto;
-    margin: 10px auto;
-    position: relative;
-    vertical-align: top;
-}
-
-/* Visual settings to the inner order section */
-.orders-inner{
-    display: inline-block;
-    background: #C3AF8D;
-    border-width: 2px 2px 2px 2px;
-    border-color: #8C3A2E;
-    border-style: solid;
-}
-
-.country{
-    display:inline-block;
-    vertical-align: top;
-    padding-left: 0px;
-    margin: 10px;
-    text-align: left;
-}
-
-/* Add margin to name of each nationality */
-.country h4{
-    margin-left: 15px;
-}
-
-/* Add allies tank picture as bullet list icon for armies */
-#allies > .army{
-    list-style-image: url('../images/Tank_Blue.png');
-}
-
-/* Add allies fleet picture as bullet list icon for fleets */
-#allies > .fleet{
-    list-style-image: url('../images/Fleet_Blue.png');
-}
-
-/* Add axis tank picture as bullet list icon for armies */
-#axis > .army{
-    list-style-image: url('../images/Tank_Red.png');
-}
-
-/* Add axis fleet picture as bullet list icon for fleets */
-#axis > .fleet{
-    list-style-image: url('../images/Fleet_Red.png');
-}
-
-/* Remove spacing between elements for orders */
-#table-orders{
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-width: 1px 1px 1px 1px;
-    border-style: solid;
-    /*    padding: 10px 10px 10px 10px;*/
-}
-
-#table-orders td{
-    padding: 5px 2px 5px 2px;
-}
-

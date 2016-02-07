@@ -22,7 +22,7 @@
         <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
         <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
         <script type='text/javascript' src='js/dynamicpage.js'></script>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type='text/javascript' src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script>
             $(function () {
                 $("#header").load("header.html");
@@ -43,68 +43,11 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Raptor vs Chessmaster</h3>
                     </div>
-                    <div class="panel-body historique" id="guts">                            
+                    <div class="panel-body resultats" id="guts">                            
                         <div id="game-menu"></div>
-                        <!-- Carousel -->
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!--       Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                                <li data-target="#myCarousel" data-slide-to="3"></li>
-                                <li data-target="#myCarousel" data-slide-to="4"></li>
-                                <li data-target="#myCarousel" data-slide-to="5"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="active item">
-                                    <div class="slider-size">
-                                        <img src="images/1900_P.png"/>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-size">
-                                        <img src="images/1900_A.png"/>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-size">
-                                        <img src="images/1901_P.png"/>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-size">
-                                        <img src="images/1901_A.png"/>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-size">
-                                        <img src="images/1902_P.png"/>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="slider-size">
-                                        <img src="images/1902_A.png"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-
-                            <div id="carouselButtons">
-                                <button id="playButton" type="button" class="btn btn-default btn-xs">
-                                    <span class="fa fa-play-circle"></span>
-                                </button>
-                                <button id="pauseButton" type="button" class="btn btn-default btn-xs">
-                                    <span class="fa fa-pause-circle"></span>
-                                </button>
-                            </div>
+                        
+                        <div>
+                            <img src="images/1902_A.png" class="main-image">
                         </div>
 
                         <div class='orders'>
@@ -151,9 +94,9 @@
 
         <!-- Script to Activate the Carousel -->
         <script>
-                    $('.carousel').carousel({
-                        interval: 6000 //changes the speed
-                    })
+            $('.carousel').carousel({
+                interval: 6000 //changes the speed
+            })
         </script>
 
     </body>

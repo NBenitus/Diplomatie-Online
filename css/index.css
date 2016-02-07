@@ -30,22 +30,44 @@ h1{
 }
 
 /* Minimum width for the game's name column */
-#name_games{
+#name-games{
+    width: 1%;
     min-width: 250px;
     max-width: 250px;
 }
 
 /* Display ... when there is an overflow for the game master and game's name columns */
-#name_games,
+#name-games,
 #name_gamemaster{
     overflow:hidden;
     text-overflow: ellipsis;
 }
 
-@media (min-width: 768px)
-{
-    #wrapper {
-        padding-left: 240px;
-        margin-left: 20px;
+td, th{
+    width: 1%;
+    white-space:nowrap;
+}
+
+.mandatory-table{
+    width: 1px;
+}
+
+@media (max-width: 1249px) {
+    .optional-table {
+        display: none;
+    }
+    
+    .col-md-6{
+        width: 1px;
+    }
+}
+
+@media (max-width: 500px) {
+    #name-games{
+        max-width: 120px;
+    }
+    .title{
+        padding-top: 60px;
+        font-size: 4em;
     }
 }

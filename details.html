@@ -13,7 +13,9 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" >
         <link href="css/sb-admin.css" rel="stylesheet">
-        <link href="css/custom.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/panel.css" rel="stylesheet">
+        <link href="css/details.css" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico">
 
         <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
@@ -25,59 +27,53 @@
                 $("#header").load("header.html");
             });
         </script> 
+        <script>
+            $(function () {
+                $("#game-menu").load("gamemenu.html");
+            });
+        </script> 
     </head>
     <body>
         <div id="header"></div>
 
-        <div id="wrapper">
-            <div class="container" role="main">
-                <section id="main-content">
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Raptor vs Chessmaster</h3>
-                        </div>
-                        <div class="panel-body" id="guts">
-                            <div class='row'>
-                                <div class="col-md-6">
-                                    <table class="table table-bordered">
-                                        <tbody>
-                                            <tr>
-                                                <td>Conditions de victoire</td>
-                                                <td>Pas de fin automatique</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Date du dernier tour joué</td>
-                                                <td>20-06-2015</td>
-                                            </tr>
-                                            </tr>
-                                            <tr>
-                                                <td>Date limite d'envoi des ordres</td>
-                                                <td>Aucune</td>
-                                            </tr>
-                                            </tr>
-                                            <tr>
-                                                <td>Mode d'arbitrage</td>
-                                                <td>Automatique</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <img src="images/Diplomatie_Partie.png">
-                                </div>
+        <div id="page-wrapper">
+            <div class="container">
+                <div class="panel panel-danger" id="main-content">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Raptor vs Chessmaster</h3>
+                    </div>
+                    <div class="panel-body details" id="guts">
+                        <div id="game-menu"></div>
+                        <div class='row'>
+                            <div class="col-md-6">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Conditions de victoire</td>
+                                            <td>Pas de fin automatique</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date du dernier tour joué</td>
+                                            <td>20-06-2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date limite d'envoi des ordres</td>
+                                            <td>Aucune</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mode d'arbitrage</td>
+                                            <td>Automatique</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
+                        <div>
+                            <img src="images/Diplomatie_Partie.png" class='main-image'>
+                        </div>
 
-                    <div class='game-menu' id="dynamic">
-                        <ul>
-                            <li class='active'><a href="details.html">Détails</a></li>
-                            <li><a href="ordres.html">Ordres</a></li>
-                            <li><a href="#">Résultats</a></li>
-                            <li><a href="historique.html">Historique</a></li>
-                            <li><a href="#">Missives privées</a></li>
-                            <li><a href="#">Missives générales</a></li>
-                        </ul>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
 

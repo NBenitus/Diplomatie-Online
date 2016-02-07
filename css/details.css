@@ -1,0 +1,12 @@
+.table-bordered{
+    white-space: nowrap;
+}
+
+.table-bordered > tbody > tr > td,
+.table-bordered{
+    background: #C3AF8D;
+    border-width: 2px 2px 2px 2px;
+    border-color: #8C3A2E;
+    border-style: solid;
+    
+}

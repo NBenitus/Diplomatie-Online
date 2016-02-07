@@ -1,10 +1,144 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Feb 4, 2016, 3:47:25 AM
-    Author     : User
-*/
+/**{
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: pink;
+}*/
 
+/* Change background color of the body */
+body,
+#page-wrapper{
+    background: #E9DEC3;; 
+}
+
+/* Setting the width of the side panel */
+.side-nav{
+    width: 240px;
+}
+
+/* Add a margin to the sub menu options of the side menu */
+.side-nav ul{
+    margin-left: 20px;
+}
+
+/* Add padding between menu options of the top bar */
+.nav.navbar-nav a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Change font for the site */
+p, div, h1, h2, h3, h4, h5, h6{
+    font-family: 'Corben', Helvetica, Arial, sans-serif;
+}
+
+/* Remove top and bottom lines of Search input field */
+.navbar-form{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Remove top and bottom lines */
+.navbar-form input{
+    border: 0px;
+}
+
+/* Always align drop down menu to the right of Search input field */
+.navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+/* Set top and bottom custom padding to Search input text field */
+.navbar-form{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 0px;
+      margin-bottom: 0px;  
+}
+
+/* Set top and buttom padding to menu options in the top menu nav bar */
+.top-nav > li > a {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;      
+ }
+ 
+ .badge{
+     margin-left: 5px;
+ }
+
+/* Set left and right padding to menu options in the top menu nav bar */ 
+@media (max-width: 939px) {
+    .nav > li > a {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav > li > a {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .navbar-form{
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
+}
+
+@media (min-width: 768px) {
+
+    #game-menu-header{
+        display: none !important;
+        /*        position: relative;
+                float: right;
+                padding: 9px 10px;
+                margin-top: 8px;
+                margin-right: 15px;
+                margin-bottom: 8px;
+                background-color: transparent;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 4px;*/
+    }
+
+    #top-menu-header{
+        float: none;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    #top-menu-header button{
+        display: block !important;
+    }
+}
+
+@media (min-width: 940px) {    
+
+    #top-menu-header{
+        float: left;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #top-menu-header > button{
+        display: none !important;
+    }
+
+    #page-wrapper{
+        padding-left: 240px;
+        margin-left: 20px;
+    }
+    
+    .navbar-form{
+                padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
