@@ -4,14 +4,10 @@
     margin-bottom: 0px;
 }
 
-/* Removing padding for the objects */
+/* Padding for the panel's body */
 .panel-body{
     padding: 10px;
 }
-
-/*.panel li:hover{
-    background: white;
-}*/
 
 /* Highlight the active page in the menu */
 .panel-body.details li.details,
@@ -25,6 +21,7 @@
     border-style: solid;
 }
 
+/* Text color of the menu corresponding to the selected tab */
 .panel-body.details li.details a,
 .panel-body.resultats li.resultats a,
 .panel-body.ordres li.ordres a ,
@@ -33,6 +30,7 @@
     color: black;
 }
 
+/* Text color of the menu corresponding to the selected tab upon hover */
 .panel-body.details li.details a:hover,
 .panel-body.resultats li.resultats a:hover,
 .panel-body.ordres li.ordres a:hover,
@@ -41,9 +39,13 @@
     color: white;
 }
 
-.panel-body a:hover{
-    color: pink;
-}
+ 
+ /* Margins for the badge in the game menu */
+ .missives .badge{
+     margin-left: 5px;
+     margin-bottom: 5px;
+ }
+
 
 @media (min-width: 320px) { 
 

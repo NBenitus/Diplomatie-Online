@@ -66,10 +66,6 @@ p, div, h1, h2, h3, h4, h5, h6{
       margin-top: 0px;
       margin-bottom: 0px;      
  }
- 
- .badge{
-     margin-left: 5px;
- }
 
 /* Set left and right padding to menu options in the top menu nav bar */ 
 @media (max-width: 939px) {
@@ -89,7 +85,6 @@ p, div, h1, h2, h3, h4, h5, h6{
         padding-right: 6px;
         margin-left: 0px;
         margin-right: 0px;
-
     }
 }
 
@@ -97,16 +92,6 @@ p, div, h1, h2, h3, h4, h5, h6{
 
     #game-menu-header{
         display: none !important;
-        /*        position: relative;
-                float: right;
-                padding: 9px 10px;
-                margin-top: 8px;
-                margin-right: 15px;
-                margin-bottom: 8px;
-                background-color: transparent;
-                background-image: none;
-                border: 1px solid transparent;
-                border-radius: 4px;*/
     }
 
     #top-menu-header{

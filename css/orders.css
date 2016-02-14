@@ -61,7 +61,7 @@
     display:block;
 }
 #table-orders td{
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     display: inline-block;
 }
 
@@ -85,4 +85,28 @@
 
 .region{
     width: 40px;
+}
+
+.table-responsive {
+    border-width: 0px;
+}
+
+@media (max-width: 380px)
+{
+    .orders-validated{
+        padding-left: 5px;
+    }
+    .second-army-text{
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 330px)
+{
+    .orders-validated{
+        padding-left: 4px;
+    }
+    .second-army-text{
+        padding-right: 0px;
+    }
 }
