@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Jeu Diplomacy en ligne</title>
+
+        <link rel="icon" href="images/favicon.ico">
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" >
+        <link href="css/sb-admin.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/panel.css" rel="stylesheet">
+        <link href="css/missives.css" rel="stylesheet">
+
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+        <script type='text/javascript' src='js/dynamicpage.js'></script>
+        <script type='text/javascript' src='js/innerdynamicpage.js'></script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("header.html");
+            });
+        </script> 
+        <script>
+            $(function () {
+                $("#game-menu").load("gamemenu.html");
+            });
+        </script> 
+    </head>
+    <body>
+        <div id="header"></div>
+
+        <div id="page-wrapper">
+            <div class="container">
+                <div class="panel panel-primary" id="main-content">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Raptor vs Chessmaster</h3>
+                    </div>
+                    <div class="panel-body missives" id="guts">
+                        <div id="game-menu"></div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="missivesdiplo.html">Diplomatiques</a></li>
+                            <li role="presentation"><a href="missivesgenerales.html">Générales</a></li>
+                        </ul>
+                        <div class="panel-body">
+                            <div id='missives-panel'>
+                                <div>
+                                    <button type="button" class="btn btn-lg btn-primary">Poster</button>
+                                </div>
+                                <div class='row'>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Raptor</h3>
+                                            <p class='post time'>30 avril 2001 - 11:00:42.</p>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                Je serai en vacances du 1er mai 2001 au 16 juin 2006.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-danger">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Tullius</h3>
+                                            <p class='post time'>30 avril 2001 - 14:22:14.</p>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                Bonnes vacances!. Où vas-tu?
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-success">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Raptor</h3>
+                                            <p class='post time'>30 avril 2001 - 21:46:23.</p>
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>
+                                                Merci :). À la plage! Quelques années sabatiques me feront du bien!
+                                                <br><br>
+                                                :P
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="js/carouselPlayPause.js"></script>
+
+            <!-- Script to Activate the Carousel -->
+            <script>
+            $('.carousel').carousel({
+                interval: 6000 //changes the speed
+            })
+            </script>
+
+    </body>
+</html>

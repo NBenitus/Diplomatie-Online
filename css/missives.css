@@ -1,0 +1,49 @@
+#missives-panel{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+}
+
+html,
+body,
+#main-content,
+#page-wrapper{    
+    height: 100%;
+}
+
+
+#page-wrapper{
+    padding-bottom: 20px;
+}
+
+*{
+    overflow-x: hidden;
+}
+
+.post.time{
+    float: right;
+}
+
+.panel-title{
+    display: inline-block;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.btn-primary{
+/*    margin-bottom: 20px;*/
+}
+
+.panel-danger,
+.panel-success{
+    margin-top: 20px;
+}
+
+/*@media (min-width: 940px) and(max-width: 1000px){
+    .container {
+        width: 650px;
+    }
+}*/

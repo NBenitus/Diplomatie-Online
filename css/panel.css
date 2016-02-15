@@ -9,37 +9,16 @@
     padding: 10px;
 }
 
-/* Highlight the active page in the menu */
-.panel-body.details li.details,
-.panel-body.resultats li.resultats,
-.panel-body.ordres li.ordres,
-.panel-body.historique li.historique,
-.panel-body.missives li.missives { 
-    background: #C3AF8D;
-    border-width: 2px 2px 2px 2px;
-    border-color: #8C3A2E;
-    border-style: solid;
-}
-
 /* Text color of the menu corresponding to the selected tab */
 .panel-body.details li.details a,
 .panel-body.resultats li.resultats a,
 .panel-body.ordres li.ordres a ,
 .panel-body.historique li.historique a,
 .panel-body.missives li.missives a { 
-    color: black;
-}
-
-/* Text color of the menu corresponding to the selected tab upon hover */
-.panel-body.details li.details a:hover,
-.panel-body.resultats li.resultats a:hover,
-.panel-body.ordres li.ordres a:hover,
-.panel-body.historique li.historique a:hover,
-.panel-body.missives li.missives a:hover { 
     color: white;
+    font-size: 1.5em;
 }
 
- 
  /* Margins for the badge in the game menu */
  .missives .badge{
      margin-left: 5px;
@@ -48,10 +27,9 @@
 
 
 @media (min-width: 320px) { 
-
     /* Set width of the panel */
     .panel{
-        display:inline-block;
+/*        display:inline-block;*/
         width: 100%;
         max-width: 700px;
     }

@@ -1,0 +1,87 @@
+.axis .army{
+    content: url("../images/Tank_Red.png")
+}
+
+.axis .fleet{
+    content: url("../images/Fleet_Red.png")
+}
+
+.allies .army{
+    content: url("../images/Tank_Blue.png")
+}
+
+.allies .fleet{
+    content: url("../images/Fleet_Blue.png")
+}
+
+.austria .army{
+    content: url("../images/Tank_Black.png")
+}
+
+.austria .fleet{
+    content: url("../images/Fleet_Black.png")
+}
+
+.italy .army{
+    content: url("../images/Tank_Green.png")
+}
+
+.italy .fleet{
+    content: url("../images/Fleet_Green.png")
+}
+
+.russia .army{
+    content: url("../images/Tank_Yellow.png")
+}
+
+.russia .fleet{
+    content: url("../images/Fleet_Yellow.png")
+}
+
+.england .army{
+    content: url("../images/Tank_Teal.png")
+}
+
+.england .fleet{
+    content: url("../images/Fleet_Teal.png")
+}
+
+.transparent{
+    content: url("../images/Transparent.png")
+}
+
+.axis,
+.allies,
+.england{
+    margin-right: 15px;
+}
+
+.italy,
+.russia{
+    margin-right: 10px;
+}
+
+/*.table.title{
+    margin-bottom: 30px;
+}*/
+
+@media (max-width: 600px)
+{
+    .army,
+    .fleet,
+    .transparent{
+        width: 13px;
+        height: auto;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .army,
+    .fleet,
+    .transparent{
+        width: 11px;
+        height: auto;
+    }
+}
+
