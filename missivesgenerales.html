@@ -14,26 +14,31 @@
 
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" >
+        <link href="css/jquery.cssemoticons.css" rel="stylesheet"  />
         <link href="css/sb-admin.css" rel="stylesheet">
         <link href="css/global.css" rel="stylesheet">
         <link href="css/panel.css" rel="stylesheet">
         <link href="css/missives.css" rel="stylesheet">
 
         <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+        <script type="text/javascript" src="js/jquery.cssemoticons.js"></script>
         <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+
         <script type='text/javascript' src='js/dynamicpage.js'></script>
         <script type='text/javascript' src='js/innerdynamicpage.js'></script>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script type='text/javascript' src="//code.jquery.com/jquery-1.10.2.js"></script>
+
         <script>
             $(function () {
                 $("#header").load("header.html");
             });
         </script> 
+
         <script>
             $(function () {
                 $("#game-menu").load("gamemenu.html");
             });
-        </script> 
+        </script>        
     </head>
     <body>
         <div id="header"></div>
@@ -56,31 +61,49 @@
                                     <button type="button" class="btn btn-lg btn-primary">Poster</button>
                                 </div>
                                 <div class='row'>
+
+                                    <div class="well">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                                        </form>
+                                    </div>
+
                                     <div class="panel panel-success">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">Raptor</h3>
+                                            <h3 class="panel-title"><a href="#">Raptor</a></h3>
                                             <p class='post time'>30 avril 2001 - 11:00:42.</p>
                                         </div>
                                         <div class="panel-body">
                                             <p>
                                                 Je serai en vacances du 1er mai 2001 au 16 juin 2006.
                                             </p>
+                                            <p class="edit-buttons"> 
+                                                <a href="#"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            </p> 
                                         </div>
                                     </div>
                                     <div class="panel panel-danger">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">Tullius</h3>
+                                            <h3 class="panel-title"><a href="#">Tullius</a></h3>
                                             <p class='post time'>30 avril 2001 - 14:22:14.</p>
                                         </div>
                                         <div class="panel-body">
                                             <p>
                                                 Bonnes vacances!. Où vas-tu?
                                             </p>
+                                            <p class="edit-buttons"> 
+                                                <a href="#"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            </p> 
                                         </div>
                                     </div>
                                     <div class="panel panel-success">
                                         <div class="panel-heading">
-                                            <h3 class="panel-title">Raptor</h3>
+                                            <h3 class="panel-title"><a href="#">Raptor</a></h3>
                                             <p class='post time'>30 avril 2001 - 21:46:23.</p>
                                         </div>
                                         <div class="panel-body">
@@ -89,6 +112,10 @@
                                                 <br><br>
                                                 :P
                                             </p>
+                                            <p class="edit-buttons"> 
+                                                <a href="#"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            </p> 
                                         </div>
                                     </div>
                                 </div>
@@ -97,18 +124,21 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="js/carouselPlayPause.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/carouselPlayPause.js"></script>
 
-            <!-- Script to Activate the Carousel -->
-            <script>
+        <!-- Script to Activate the Carousel -->
+        <script>
             $('.carousel').carousel({
                 interval: 6000 //changes the speed
             })
-            </script>
-
+        </script>
+        
+                <script type="text/javascript">
+            $("#missives-panel").emoticonize();
+        </script>
     </body>
 </html>

@@ -40,6 +40,19 @@ body,
 .panel-danger,
 .panel-success{
     margin-top: 20px;
+    border-width: 5px;
+}
+
+.edit-buttons{
+    float: right;
+}
+
+.well{
+    margin-top: 20px;
+}
+
+.css-emoticon{
+    font-size: 30px
 }
 
 /*@media (min-width: 940px) and(max-width: 1000px){

@@ -74,6 +74,20 @@ h1{
     padding-left: 50px;
 }
 
+.table-forum{
+    table-layout: fixed;
+}
+
+.table-forum td{
+    overflow: hidden;
+    width: 100px;
+}
+
+.table-forum td+td{
+    overflow: hidden;
+    width: auto;
+}
+
 @media (max-width: 1275px) {
     .title h1,
     .title div{
