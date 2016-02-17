@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jeu Diplomacy en ligne</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/sb-admin.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/forum.css" rel="stylesheet">
+        <link href="css/chat.css" rel="stylesheet">
+        <link rel="icon" href="images/favicon.ico">
+
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("header.html");
+            });
+        </script> 
+        <script>
+            $(function () {
+                $("#titre-couleurs").load("titre-couleurs.html");
+            });
+        </script> 
+        <script>
+            $(function () {
+                $("#chat").load("chat.html");
+            });
+        </script> 
+    </head>
+    <body>
+
+
+        <div class="container" style="margin-top: 35px">
+            <div class="page-header page-heading">
+                <h1 class="pull-left">Forums</h1>
+                <ol class="breadcrumb pull-right where-am-i">
+                    <li><a href="#">Forums</a></li>
+                    <li class="active">List of topics</li>
+                </ol>
+                <div class="clearfix"></div>
+            </div>
+            <p class="lead">Ici, vous pouvez trouver de tout, des articles de stratégie, des tournois que vous pouvez rejoindre et discuter de sujets variés qui n'ont pas de lien avec Diplomatie.</p>
+            <table class="table forum table-striped">
+                <thead>
+                    <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                            <h3>Important</h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Sujets</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Messages</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Dernier message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-question fa-2x text-primary"></i></td>
+                        <td>
+                            <h4><a href="#">Règles du jeu</a><br><small>Pour toutes questions concernant les règles du jeu, c'est ici qu'il faut aller.</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">161</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">1759</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Raptor</a><br><small><i class="fa fa-clock-o"></i> Il y a 6 mois</small></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+                        <td>
+                            <h4><a href="#">FAQ</a><br><small>Si vous avez une question sur comment faire fonctionner le site, parce que c'est pas clair du tout, adressez vous ici.</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">olyer</a><br><small><i class="fa fa-clock-o"></i> Il y a 3 jours</small></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+                        <td>
+                            <h4><a href="#">Problèmes techniques</a><br><small>Un bug ? Un joueur qui répond plus ? Une partie bloquée ? C'est ici qu'il faut s'adresser. Les administrateurs se feront un plaisir de battre un record de rapidité d'action !</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">olyer</a><br><small><i class="fa fa-clock-o"></i> Il y a 3 jours</small></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table forum table-striped">
+                <thead>
+                    <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                            <h3>Parties</h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Sujets</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Messages</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Dernier message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-heart fa-2x text-primary"></i></td>
+                        <td>
+                            <h4><a href="#">Tournois</a><br><small>Des tournois sont organisés. Pour tout ce qui concerne ces tournois (inscription, déroulement, dénonciation, etc....), c'est ici !</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 3 months ago</small></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-magic fa-2x text-primary"></i></td>
+                        <td>
+                            <h4><a href="#">Recherche/remplacements de joueurs</a><br><small>Si vous êtes à la recherche de joueurs pour créer une nouvelle partie, ou que vous cherchez un joueur de remplacement, venez ici.</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 1 years ago</small></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center"><i class="fa fa-magic fa-2x text-primary"></i></td>
+                        <td>
+                            <h4><a href="#">Variantes</a><br><small>Forum spécialement dédié à ceux qui veulent discuter des variantes de Diplomatie. Ou bien proposer de nouvelles règles, créer des parties spéciales, etc...</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">Jane Doe</a><br><small><i class="fa fa-clock-o"></i> 1 years ago</small></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table forum table-striped">
+                <thead>
+                    <tr>
+                        <th class="cell-stat"></th>
+                        <th>
+                            <h3>Discussion générale</h3>
+                        </th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Sujets</th>
+                        <th class="cell-stat text-center hidden-xs hidden-sm">Messages</th>
+                        <th class="cell-stat-2x hidden-xs hidden-sm">Dernier message</th>
+                    </tr>
+                </thead>
+                <tbody>
+<!--                    <tr>
+                        <td></td>
+                        <td colspan="4" class="center">No topics have been added yet.</td>
+                    </tr>-->
+                                        <tr>
+                        <td class="text-center"><i class="fa fa-exclamation fa-2x text-danger"></i></td>
+                        <td>
+                            <h4><a href="#">Rien à voir avec diplo</a><br><small>Il fait beau, les oiseaux chantent, vous avez pas envie de parler de Diplomatie... venez ici !</small></h4>
+                        </td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">6532</a></td>
+                        <td class="text-center hidden-xs hidden-sm"><a href="#">152123</a></td>
+                        <td class="hidden-xs hidden-sm">by <a href="#">lafouine</a><br><small><i class="fa fa-clock-o"></i> Il y a 10 minutes</small></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

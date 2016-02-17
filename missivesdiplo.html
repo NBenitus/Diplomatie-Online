@@ -38,7 +38,12 @@
     <body>
         <div id="header"></div>
 
-        <div id="page-wrapper">
+        <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+        <script>
+            $.backstretch("images/War2.jpg");
+        </script>
+
+        <div id="wrapper">
             <div class="container">
                 <div class="panel panel-primary" id="main-content">
                     <div class="panel-heading">
@@ -72,7 +77,7 @@
                                         </div>
                                         <div class="panel-body">
                                             <p>
-                                               Que dirais-tu d'un cessez-le-feu en NOI?
+                                                Que dirais-tu d'un cessez-le-feu en NOI?
                                             </p>
                                             <p class="edit-buttons"> 
                                                 <a href="#"><i class="fa fa-edit" aria-hidden="true"></i></a>
@@ -110,7 +115,7 @@
                                             </p> 
                                         </div>
                                     </div>
-                                                                        <div class="panel panel-success">
+                                    <div class="panel panel-success">
                                         <div class="panel-heading">
                                             <h3 class="panel-title"><a href="#">Raptor</a></h3>
                                             <p class='post time'>1er mai 2001 - 3:10:28.</p>
@@ -131,18 +136,9 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="js/carouselPlayPause.js"></script>
-
-            <!-- Script to Activate the Carousel -->
-            <script>
-            $('.carousel').carousel({
-                interval: 6000 //changes the speed
-            })
-            </script>
-
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>

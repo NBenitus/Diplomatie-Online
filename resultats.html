@@ -37,7 +37,12 @@
     <body>
         <div id="header"></div>
 
-        <div id="page-wrapper">
+        <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+        <script>
+            $.backstretch("images/War2.jpg");
+        </script>
+
+        <div id="wrapper">
             <div class="container">
                 <div class="panel panel-primary" id="main-content">
                     <div class="panel-heading">
@@ -95,14 +100,5 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/carouselPlayPause.js"></script>
-
-        <!-- Script to Activate the Carousel -->
-        <script>
-            $('.carousel').carousel({
-                interval: 6000 //changes the speed
-            })
-        </script>
-
     </body>
 </html>
