@@ -51,8 +51,9 @@ body,
     margin-top: 20px;
 }
 
-.css-emoticon{
-    font-size: 30px
+.new-message-discard{
+    margin-top: 15px;
+    float: right;
 }
 
 /*@media (min-width: 940px) and(max-width: 1000px){

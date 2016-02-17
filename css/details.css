@@ -2,11 +2,31 @@
     white-space: nowrap;
 }
 
+.table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > td,
 .table-bordered{
     background: #C3AF8D;
     border-width: 2px 2px 2px 2px;
     border-color: #8C3A2E;
     border-style: solid;
-    
+}
+
+.table-bordered > tbody > tr > td{
+    width: 1px;
+}
+
+@media(max-width: 525px){
+    .optional-table{
+        display: none;
+    }
+
+    .table-bordered{
+        white-space:pre-line;
+    }
+}
+
+@media(max-width: 1992px){
+    .col-md-6{
+        width: 1px;
+    }
 }

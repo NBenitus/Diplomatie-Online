@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Jeu Diplomacy en ligne</title>
+
+        <link rel="icon" href="images/favicon.ico">
+
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/sb-admin.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
+        <link href="css/listeparties.css" rel="stylesheet">
+
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script>
+            $(function () {
+                $("#header").load("header.html");
+            });
+        </script> 
+    </head>
+    <body>      
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <div id="header"></div>
+
+        <div id="page-wrapper">
+
+            <div class="container" role="main" id="main-content">
+                <h1>Parties blitz</h1>
+                <div class='row'>
+                        <div class="col-md-6">
+                            <table class="table table-bordered table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th id='name-games'>Nom des parties</th>
+                                        <th class='optional-table'>Joueurs</th>
+                                        <th class='optional-table' id='name_gamemaster'>Maître de jeu</th>
+                                        <th class='optional-table'>Fin</th>
+                                        <th class='optional-table'>Saison</th>
+                                        <th class='optional-table'>Etape</th>
+                                        <th class='optional-table'>Année</th>
+                                        <th class='mandatory-table'>Pays</th>
+                                        <th class='mandatory-table'>Ordres</th>
+                                        <th class='mandatory-table'>News</th>
+                                        <th class='mandatory-table'>Limite</th>
+                                    </tr>
+                                </thead>  
+                                <tbody>
+                                    <tr>
+                                        <td id='name-games'>
+                                            <a href="details.html">Raptor vs Chessmaster </a>
+                                        </td>
+                                        <td class='optional-table'>2/2</td>
+                                        <td class='optional-table' id='name_gamemaster'>
+                                            <a href="#">Raptor</a>
+                                        </td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1905</td>
+                                        <td class='mandatory-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'><a href="#">0</a>/<a href="#">0</a></td>
+                                        <td class='mandatory-table'><img src='images/DL.gif' alt="Date Limite"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id='name-games'>
+                                            <a href="#">Raptor vs NoahCullen</a>
+                                        </td>
+                                        <td class='optional-table'>2/2</td>
+                                        <td class='optional-table' id='name_gamemaster'>
+                                            <a href="#">Raptor</a>
+                                        </td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1903</td>
+                                        <td class='mandatory-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Non</td>
+                                        <td class='mandatory-table'>
+                                            <a href="#">1</a>/<a href="#">0</a>
+                                        </td>
+                                        <td class='mandatory-table'><img src='images/Valider.gif' alt="Date Limite"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id='name-games'>
+                                            <a href="#">Raptor vs Zoboton</a>
+                                        </td>
+                                        <td class='optional-table'>2/2</td>
+                                        <td class='optional-table' id='name_gamemaster'>
+                                            <a href="#">Zoboton</a>
+                                        </td>
+                                        <td class='optional-table'>1907</td>
+                                        <td class='optional-table'><img src='images/Saison.gif' alt="Saison"></td>
+                                        <td class='optional-table'><img src='images/Etape.gif' alt="Étape"></td>
+                                        <td class='optional-table'>1901</td>
+                                        <td class='mandatory-table'><img src='images/Nationalité.gif' alt="Nationalité"></td>
+                                        <td class='mandatory-table'>Oui</td>
+                                        <td class='mandatory-table'><a href="#">0</a>/<a href="#">5</a></td>
+                                        <td class='mandatory-table'><img src='images/dl_imminente.png' alt="Date Limite"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                <div class="row">
+                    <div class="custom-panel">
+                        <h3>Légende</h3>
+                        <table id="legende">
+                            <tr>
+                                <td>
+                                    <img src="images/Valider.gif" alt="boo"> <span>Tous les joueurs ont passé leurs ordres</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/Annuler.gif" alt="boo"> <span>Au moins un joueur n'a pas passé ses ordres</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/dl_dépassée.gif" alt="boo"> <span>Une limite de temps est fixée, et dépassée</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/dl_fixée.gif" alt="boo"> <span>Une limite de temps est fixée, et pas encore dépassée</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/dl_imminente.png" alt="boo"> <span>Une limite de temps est fixée, et elle se rapproche</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

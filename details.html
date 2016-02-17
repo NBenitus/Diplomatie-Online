@@ -10,7 +10,7 @@
 
         <title>Jeu Diplomacy en ligne</title>
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" >
         <link href="css/sb-admin.css" rel="stylesheet">
         <link href="css/global.css" rel="stylesheet">
@@ -46,7 +46,7 @@
                         <div id="game-menu"></div>
                         <div class='row'>
                             <div class="col-md-6">
-                                <table class="table table-bordered">
+                                <table class="table table-bordered" id="details-table">
                                     <tbody>
                                         <tr>
                                             <td>Conditions de victoire</td>
@@ -68,10 +68,46 @@
                                 </table>
                             </div>
                         </div>
-                        <div>
-                            <img src="images/Diplomatie_Partie.png" class='main-image'>
+                        <div class='row'>    
+                            <div class="col-md-6">
+                                <table class="table table-bordered table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Pays</th>
+                                            <th id='name_gamemaster'>Nom du joueur</th>
+                                            <th>Ordres</th>
+                                            <th class="optional-table">Status</th>
+                                        </tr>
+                                    </thead>  
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src='images/Axis.gif' alt="Pays">
+                                            </td>
+                                            <td id='name_gamemaster'><a href="#">Raptor</a></td>
+                                            <td>
+                                                <img src='images/Valider.gif' alt="Ordres validés">
+                                            </td>
+                                            <td class="optional-table">
+                                                <span class="available">Disponible</span> / <span class="connection">déconnecté</span>
+                                            </td>   
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src='images/Allies.gif' alt="Pays">
+                                            </td>
+                                            <td id='name_gamemaster'><a href="#">Chessmaster</a></td>
+                                            <td>
+                                                <img src='images/Valider.gif' alt="Ordres validés">
+                                            </td>
+                                            <td class="optional-table">
+                                                <span class="available">Disponible</span> / <span class="connection">déconnecté</span>
+                                            </td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -79,14 +115,5 @@
 
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/carouselPlayPause.js"></script>
-
-        <!-- Script to Activate the Carousel -->
-        <script>
-            $('.carousel').carousel({
-                interval: 6000 //changes the speed
-            })
-        </script>
-
     </body>
 </html>
